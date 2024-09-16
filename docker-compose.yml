@@ -1,4 +1,8 @@
 version: '3'
+
+volumes:
+  pgdata:
+
 services:
 
   postgres:
@@ -9,3 +13,6 @@ services:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "docker"
       POSTGRES_DB: "postgres"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
