@@ -8,25 +8,13 @@ export class Funcionarios {
     id: string
 
     @Column({type: 'varchar'})
-    nome: string
-
-    @Column({type: 'int' ,width: 11})
-    cpf: number
-
-    @Column({ type: 'int' ,width: 11})
-    celular: number
+    usuario: string
 
     @Column({type: 'varchar'})
     email: string
 
     @Column({type: 'varchar'})
-    cargo: string
-
-    @Column({type: 'decimal'})
-    salario: string
-
-    @Column({type: 'date'})
-    data_contratacao: Date
+    senha: string
 
     @OneToMany(() => Vendas, vendas => vendas.Funcionarios)
     vendas: Vendas[]
