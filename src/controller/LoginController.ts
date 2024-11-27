@@ -29,6 +29,5 @@ export class LoginController {
 
     async getprofile(req:Request, res: Response) {
         return res.json(req.funcionario)
-
     }
 }
