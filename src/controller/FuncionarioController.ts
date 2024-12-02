@@ -42,7 +42,7 @@ export class FuncionariosController {
             res.status(201).json(funcionario)
 
         } catch (error) { 
-            console.log(error) 
+
             res.status(400).json(error) 
         }
     }

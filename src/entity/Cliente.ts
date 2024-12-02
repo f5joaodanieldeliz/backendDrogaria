@@ -14,10 +14,10 @@ export class Clientes {
     @Column({type: 'varchar'})
     Email: string
 
-    @Column({type: 'int' ,width: 11})
+    @Column({type: 'bigint' ,width: 11})
     cpf: number
 
-    @Column({type: 'int' ,width: 11})
+    @Column({type: 'bigint' ,width: 11})
     celular: number
 
     @Column({type: 'date'})
