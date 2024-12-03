@@ -20,6 +20,10 @@ routes.get('/cliente', new ClienteController().getCliente)
 routes.put('/cliente/:id', new ClienteController().putCliente)
 routes.delete('/cliente/:id', new ClienteController().DelCliente)
 
+
+routes.get('/register', new FuncionariosController().get)
+routes.delete('/register/:id', new FuncionariosController().Del)
+
 routes.get('/profile', new LoginController().getprofile)
 routes.post('/compra', new EstoqueController().create)
 

@@ -46,4 +46,27 @@ export class FuncionariosController {
             res.status(400).json(error) 
         }
     }
+    async get(req: Request, res: Response) {
+        try {
+            const response = await funcionariosRespository.find({relations: ["vendas"]})
+            return res.status(200).json(response)  
+        } catch (error) { 
+            res.status(400).json(error) 
+        }
+    }
+    async Del(req: Request, res: Response){
+        try {
+            const {id} = req.params
+
+            if(!id){
+                return res.status(400).json({message: "Nao foi possivel Achar o produto"})
+            }
+
+            const DelProduto = await funcionariosRespository.delete(id)
+
+            return res.status(200).json({message: "Dados Deletado"})
+        } catch (error) {
+            return res.status(500).json({message: "Internal Server Error"})
+        }
+    }
 }

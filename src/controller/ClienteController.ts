@@ -28,7 +28,7 @@ export class ClienteController {
     async getCliente(req: Request, res: Response, next: NextFunction){
         try {
             const response = await ClientesRespository.find({
-                relations: ["enderecos"],
+                relations: ["enderecos"]
               })
             return res.status(200).json(response)  
         } catch (error) {
@@ -79,6 +79,5 @@ export class ClienteController {
         } catch (error) {
             return res.status(500).json({message: "Internal Server Error"})
         }
-
     }
 }
